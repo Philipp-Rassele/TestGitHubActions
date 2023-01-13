@@ -12,6 +12,8 @@ jobs:
       - name: "Test stuff"
         # shell: bash
         run: |
-          compgen -c
+          sudo apt-get -y install coreutils
+          cat ".env"
+          # compgen -c
 
         # run: echo "$value"
