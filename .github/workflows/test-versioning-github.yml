@@ -10,10 +10,13 @@ jobs:
     # name: Test Versioning GitHub
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: "Checkout GitHub Action"
+        uses: actions/checkout@v3
+
+      - name: "Test stuff"
         shell: bash
-      - run: |
+        run: |
           value = cat ".env"
           echo "$value"
 
-      - run: echo "$value"
+        run: echo "$value"
