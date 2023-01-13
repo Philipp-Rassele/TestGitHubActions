@@ -7,13 +7,11 @@ defaults:
 
 jobs:
   update-version-number:
-    name: Test Versioning GitHub
-    # If this PR was not opened by the dependabot
-    if: ${{ !startsWith(github.head_ref, 'dependabot/') }}
+    # name: Test Versioning GitHub
     runs-on: ubuntu-latest
     steps:
-        shell: bash
       - uses: actions/checkout@v3
+        shell: bash
       - run: |
           value = cat ".env"
           echo "$value"
