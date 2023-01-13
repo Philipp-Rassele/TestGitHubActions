@@ -1,10 +1,6 @@
 name: Test Versioning GitHub
 on: [label, push]
 
-defaults:
-  run:
-    working-directory: TestGitHubActions
-
 jobs:
   update-version-number:
     # name: Test Versioning GitHub
