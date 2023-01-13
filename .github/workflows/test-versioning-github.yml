@@ -13,7 +13,7 @@ jobs:
         # shell: bash
         run: |
           sudo apt-get -y install coreutils
-          cat ".env"
+          source ".env"
           # compgen -c
 
         # run: echo "$value"
