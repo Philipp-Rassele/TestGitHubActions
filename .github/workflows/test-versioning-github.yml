@@ -12,10 +12,6 @@ jobs:
       - name: "Test stuff"
         # shell: bash
         run: |
-          if ! [ -x "$(command -v cat)" ]; then
-            echo 'Error: cat is not installed.' >&2
-            exit 1
-          fi
-          echo "Test"
+          compgen -c
 
         # run: echo "$value"
