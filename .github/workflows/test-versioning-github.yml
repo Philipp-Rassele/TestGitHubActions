@@ -12,7 +12,7 @@ jobs:
       - name: "Test stuff"
         # shell: bash
         run: |
-          value = cat ".env"
-          echo "$value"
+          # value = cat ".env"
+          echo "Test"
 
         # run: echo "$value"
