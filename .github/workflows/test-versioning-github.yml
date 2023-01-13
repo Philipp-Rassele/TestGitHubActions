@@ -19,4 +19,4 @@ jobs:
           value = cat ".env"
           echo "$value"
 
-        run: echo "$value"
+        # run: echo "$value"
