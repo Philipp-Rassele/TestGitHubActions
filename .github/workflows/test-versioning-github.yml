@@ -12,7 +12,10 @@ jobs:
       - name: "Test stuff"
         # shell: bash
         run: |
-          # value = cat ".env"
+          if ! [ -x "$(command -v cat)" ]; then
+            echo 'Error: cat is not installed.' >&2
+            exit 1
+          fi
           echo "Test"
 
         # run: echo "$value"
