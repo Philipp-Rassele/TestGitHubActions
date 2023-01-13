@@ -1,7 +1,6 @@
 name: Test Versioning GitHub
-on:
-  [label, push]
-      
+on: [label, push]
+
 defaults:
   run:
     working-directory: TestGitHubActions
@@ -12,10 +11,11 @@ jobs:
     # If this PR was not opened by the dependabot
     if: ${{ !startsWith(github.head_ref, 'dependabot/') }}
     runs-on: ubuntu-latest
+    shell: bash
     steps:
-      - uses: actions/checkout@v1
-      - run: | 
+      - uses: actions/checkout@v3
+      - run: |
           value = cat ".env"
           echo "$value"
-         
+
       - run: echo "$value"
