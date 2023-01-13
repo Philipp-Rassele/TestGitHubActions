@@ -1,9 +1,7 @@
 name: Test Versioning GitHub
 on:
-  label:
-    branches:
-      - main
-
+  [label, push]
+      
 defaults:
   run:
     working-directory: TestGitHubActions
