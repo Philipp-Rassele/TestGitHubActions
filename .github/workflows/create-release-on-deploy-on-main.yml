@@ -27,13 +27,12 @@ jobs:
               const fs = require("fs");
               fs.writeFile('./version.txt', "test", err => {
                 if (err) {
-                  core.setFailed(error.message);
-                  core.setOutput(err);
+                  console.log(err);
                 }
                 // file written successfully
               });
 
-              core.setOutput("Finished writing file");
+              console.log("Finished");
             } catch (error) {
               core.setFailed(error.message);
             }
