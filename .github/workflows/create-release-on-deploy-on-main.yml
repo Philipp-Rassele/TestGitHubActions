@@ -27,7 +27,7 @@ jobs:
               const fs = require("fs");
               fs.writeFile('./version.txt', "test", err => {
                 if (err) {
-                  console.error(err);
+                  core.debug(err);
                 }
                 // file written successfully
               });
