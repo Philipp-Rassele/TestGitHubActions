@@ -26,6 +26,8 @@ jobs:
             try {
               const fs = require("fs");
               fs.writeFile('./version.txt', "test");
+
+              core.debug("Finished task");
             } catch (error) {
               core.setFailed(error.message);
             }
