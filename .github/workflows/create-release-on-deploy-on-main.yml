@@ -28,11 +28,12 @@ jobs:
               fs.writeFile('./version.txt', "test", err => {
                 if (err) {
                   core.setFailed(error.message);
+                  core.setOutput(err);
                 }
                 // file written successfully
               });
 
-              core.debug("Finished task");
+              core.setOutput("Finished writing file");
             } catch (error) {
               core.setFailed(error.message);
             }
