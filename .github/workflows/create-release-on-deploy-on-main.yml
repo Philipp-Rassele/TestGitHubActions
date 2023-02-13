@@ -47,7 +47,7 @@ jobs:
           script: |
             try {
               const fs = require("fs");
-              fs.writeFile('version.txt', ${{ steps.generate_release_tag.outputs.release_tag }});
+              fs.writeFile('./version.txt', ${{ steps.generate_release_tag.outputs.release_tag }});
             } catch (error) {
               core.setFailed(error.message);
             }
