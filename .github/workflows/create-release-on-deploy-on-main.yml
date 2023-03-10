@@ -23,7 +23,8 @@ jobs:
         if: ${{ steps.changed-files-atlas.outputs.any_changed == 'true'}}
         uses:
           ./.github/workflows/build-webapp
-
+        uses: ./.github/workflows/formatting
+        
           # name: Build Atlas staging
           # uses: ./.github/workflows/build-webapp
 
