@@ -34,3 +34,4 @@ jobs:
         run: |
           echo 'HHHH'
           echo 'AAAA'
+        shell: bash
