@@ -32,5 +32,6 @@ jobs:
       - name: Test2
         if: ${{ !(steps.changed-files-atlas.outputs.any_changed == 'true')}}
         steps:
-          run: echo 'HHHH'
-          run: echo 'AAAA'
+          run: |
+            echo 'HHHH'
+            echo 'AAAA'
