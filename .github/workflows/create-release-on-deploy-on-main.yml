@@ -31,7 +31,6 @@ jobs:
           # uses: ./.github/workflows/formatting
       - name: Test2
         if: ${{ !(steps.changed-files-atlas.outputs.any_changed == 'true')}}
-        steps:
-          run: |
-            echo 'HHHH'
-            echo 'AAAA'
+        run: |
+          echo 'HHHH'
+          echo 'AAAA'
