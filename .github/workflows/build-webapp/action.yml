@@ -13,3 +13,4 @@ runs:
   steps:
     - name: Create annotation for build error
       run: echo "Building Action"
+      shell: bash
