@@ -21,12 +21,13 @@ jobs:
 
       - name: Perform necessary steps if files changes
         if: ${{ steps.changed-files-atlas.outputs.any_changed == 'true'}}
-        uses:
-          ./.github/workflows/build-webapp
+        name: Build Atlas staging
+        uses: ./.github/workflows/build-webapp
+        name: Build3454
         uses: ./.github/workflows/formatting
-        
+
           # name: Build Atlas staging
           # uses: ./.github/workflows/build-webapp
 
-          # name: Deploy Atlas staging
+          # name: Build Atlas staging
           # uses: ./.github/workflows/formatting
