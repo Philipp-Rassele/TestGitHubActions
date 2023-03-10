@@ -30,7 +30,7 @@ jobs:
           # name: Build Atlas staging
           # uses: ./.github/workflows/formatting
       - name: Test2
-        if: !${{ steps.changed-files-atlas.outputs.any_changed == 'true'}}
+        if: ${{ !(steps.changed-files-atlas.outputs.any_changed == 'true')}}
         steps:
           run: echo 'HHHH'
           run: echo 'AAAA'
