@@ -21,8 +21,9 @@ jobs:
 
       - name: Perform necessary steps if files changes
         if: ${{ steps.changed-files-atlas.outputs.any_changed == 'true'}}
-        run:
-          echo "This step will be skipped on Monday and Wednesday"
+        uses:
+          ./.github/workflows/build-webapp
+
           # name: Build Atlas staging
           # uses: ./.github/workflows/build-webapp
 
