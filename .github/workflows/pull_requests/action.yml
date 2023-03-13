@@ -8,7 +8,8 @@ inputs:
     description: "NPM_TOKEN"
     required: true
 
-jobs:
+runs:
+  using: composite
   steps:
     - name: Create annotation for build error
       run: echo "Building Action"
