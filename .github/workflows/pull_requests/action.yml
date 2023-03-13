@@ -17,7 +17,8 @@ runs:
     - name: Echo 2
       run: echo ${{inputs.WORKING_DIRECTORY}}
       shell: bash
-    - name: Prettier check for ${{ inputs.WEBAPP_NAME }}
+
+    - name: Prettier check for
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v3
