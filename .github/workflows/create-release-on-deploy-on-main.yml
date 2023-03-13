@@ -21,8 +21,10 @@ jobs:
 
       - name: Perform necessary steps if files changes
         if: ${{ !(steps.changed-files-atlas.outputs.any_changed == 'true')}}
-        uses:
-          ./.github/workflows/pull_requests
+        uses: ./.github/workflows/pull_requests
+        with:
+          WORKING_DIRECTORY: ""
+          NPM_TOKEN: ""
 
           # name: Build Atlas staging
           # uses: ./.github/workflows/build-webapp

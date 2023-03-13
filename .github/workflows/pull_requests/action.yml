@@ -9,7 +9,6 @@ inputs:
     required: true
 
 jobs:
-  using: composite
   steps:
     - name: Create annotation for build error
       run: echo "Building Action"
