@@ -1,0 +1,19 @@
+name: Web App Verification for the given 'WORKING_DIRECTORY'
+description: Verifies the Webapp for the given 'WORKING_DIRECTORY'
+inputs:
+  WORKING_DIRECTORY:
+    description: "Working directory"
+    required: true
+  NPM_TOKEN:
+    description: "NPM_TOKEN"
+    required: true
+
+jobs:
+  using: composite
+  steps:
+    - name: Create annotation for build error
+      run: echo "Building Action"
+      shell: bash
+    - name: Echo 2
+      run: echo "Echo 2"
+      shell: bash

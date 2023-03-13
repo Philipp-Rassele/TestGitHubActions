@@ -22,7 +22,7 @@ jobs:
       - name: Perform necessary steps if files changes
         if: ${{ !(steps.changed-files-atlas.outputs.any_changed == 'true')}}
         uses:
-          ./.github/workflows/build-webapp
+          ./.github/workflows/pull_requests
 
           # name: Build Atlas staging
           # uses: ./.github/workflows/build-webapp
