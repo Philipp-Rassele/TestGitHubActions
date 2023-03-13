@@ -15,5 +15,5 @@ runs:
       run: echo "Building Action"
       shell: bash
     - name: Echo 2
-      run: echo "Echo 2"
+      run: echo ${{WORKING_DIRECTORY NPM_TOKEN}}
       shell: bash
