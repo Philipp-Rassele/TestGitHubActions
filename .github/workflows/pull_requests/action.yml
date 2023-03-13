@@ -19,8 +19,7 @@ runs:
       shell: bash
 
     - name: Prettier check for
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v3
-        - name: "Web App Formatting Prettier"
-          run: echo ${{inputs.WORKING_DIRECTORY}}
+      uses: actions/checkout@v3
+
+    - name: "Web App Formatting Prettier"
+      run: echo ${{inputs.WORKING_DIRECTORY}}
