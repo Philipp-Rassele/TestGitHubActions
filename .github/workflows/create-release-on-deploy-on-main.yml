@@ -27,7 +27,7 @@ jobs:
       - name: Use pnpm
         run: pnpm i
         shell: bash
-
+        working-directory: my-app
       # - name: Perform necessary steps if files changes
       #   if: ${{ !(steps.changed-files-atlas.outputs.any_changed == 'true')}}
       #   uses: ./.github/workflows/pull_requests
