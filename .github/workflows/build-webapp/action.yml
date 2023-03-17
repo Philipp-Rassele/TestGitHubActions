@@ -14,3 +14,7 @@ runs:
     - name: Create annotation for build error
       run: echo "Building Action"
       shell: bash
+
+    - name: DDDDDDDDD
+      run: pnpm i
+      shell: bash
