@@ -13,32 +13,36 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Get changes ATLAS
-        id: changed-files-atlas
-        uses: tj-actions/changed-files@v35
-        with:
-          files: test-GitHub-actions/myapp/**
+      # - name: Get changes ATLAS
+      #   id: changed-files-atlas
+      #   uses: tj-actions/changed-files@v35
+      #   with:
+      #     files: test-GitHub-actions/myapp/**
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.2.4
         with:
           version: latest
 
-      - name: Perform necessary steps if files changes
-        if: ${{ !(steps.changed-files-atlas.outputs.any_changed == 'true')}}
-        uses: ./.github/workflows/pull_requests
-        with:
-          WORKING_DIRECTORY: ""
-          NPM_TOKEN: ""
-
-          # name: Build Atlas staging
-          # uses: ./.github/workflows/build-webapp
-
-          # name: Build Atlas staging
-          # uses: ./.github/workflows/formatting
-      - name: Test2
-        if: ${{ !(steps.changed-files-atlas.outputs.any_changed == 'true')}}
-        run: |
-          echo 'HHHH'
-          echo 'AAAA'
+      - name: Use pnpm
+        run: pnpm i
         shell: bash
+
+      # - name: Perform necessary steps if files changes
+      #   if: ${{ !(steps.changed-files-atlas.outputs.any_changed == 'true')}}
+      #   uses: ./.github/workflows/pull_requests
+      #   with:
+      #     WORKING_DIRECTORY: ""
+      #     NPM_TOKEN: ""
+
+      #     # name: Build Atlas staging
+      #     # uses: ./.github/workflows/build-webapp
+
+      #     # name: Build Atlas staging
+      #     # uses: ./.github/workflows/formatting
+      # - name: Test2
+      #   if: ${{ !(steps.changed-files-atlas.outputs.any_changed == 'true')}}
+      #   run: |
+      #     echo 'HHHH'
+      #     echo 'AAAA'
+      #   shell: bash
