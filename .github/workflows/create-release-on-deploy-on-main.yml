@@ -28,21 +28,22 @@ jobs:
         run: pnpm i
         shell: bash
         working-directory: my-app
-      # - name: Perform necessary steps if files changes
-      #   if: ${{ !(steps.changed-files-atlas.outputs.any_changed == 'true')}}
-      #   uses: ./.github/workflows/pull_requests
-      #   with:
-      #     WORKING_DIRECTORY: ""
-      #     NPM_TOKEN: ""
 
-      #     # name: Build Atlas staging
-      #     # uses: ./.github/workflows/build-webapp
+      - name: Perform necessary steps if files changes
+        if: ${{ !(steps.changed-files-atlas.outputs.any_changed == 'true')}}
+        uses: ./.github/workflows/pull_requests
+        with:
+          WORKING_DIRECTORY: ""
+          NPM_TOKEN: ""
 
-      #     # name: Build Atlas staging
-      #     # uses: ./.github/workflows/formatting
-      # - name: Test2
-      #   if: ${{ !(steps.changed-files-atlas.outputs.any_changed == 'true')}}
-      #   run: |
-      #     echo 'HHHH'
-      #     echo 'AAAA'
-      #   shell: bash
+          # name: Build Atlas staging
+          # uses: ./.github/workflows/build-webapp
+
+          # name: Build Atlas staging
+          # uses: ./.github/workflows/formatting
+      - name: Test2
+        if: ${{ !(steps.changed-files-atlas.outputs.any_changed == 'true')}}
+        run: |
+          echo 'HHHH'
+          echo 'AAAA'
+        shell: bash
